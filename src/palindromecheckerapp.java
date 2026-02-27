@@ -1,4 +1,7 @@
-public class palindromecheckerapp {
+public class palindromecheckeragit checkout develop
+        git pull
+        git merge feature/UC2
+git pushpp {
 
     static final String APP_NAME = "Palindrome Checker App";
     static final String VERSION = "Version 1.0";
