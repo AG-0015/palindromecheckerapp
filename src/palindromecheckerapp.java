@@ -1,19 +1,24 @@
+import java.util.Stack;
 public class palindromecheckerapp {
-
     public static void main(String[] args) {
 
-        String original = "Madam";
-        String lower = original.toLowerCase();
-        String reversed = "";
+        String original = "level";
+        Stack<Character> stack = new Stack<>();
 
-        for (int i = lower.length() - 1; i >= 0; i--) {
-            reversed += lower.charAt(i);
+        for (int i = 0; i < original.length(); i++) {
+            stack.push(original.charAt(i));
         }
 
-        if (lower.equals(reversed)) {
-            System.out.println(original + " is Palindrome (Case-Insensitive)");
+        String reversed = "";
+
+        while (!stack.isEmpty()) {
+            reversed += stack.pop();
+        }
+
+        if (original.equals(reversed)) {
+            System.out.println("Palindrome (Using Stack)");
         } else {
-            System.out.println(original + " is NOT Palindrome");
+            System.out.println("Not Palindrome");
         }
     }
 }
